@@ -50,11 +50,12 @@
 /* ----------------------------------------------------------
  * Rules that are significantly affected by @umijs/lint
  * ---------------------------------------------------------*/
+
 /** @type {import('stylelint').Config} */
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-css-modules'],
   rules: {
-    'selector-disallowed-list': [/(ant)-/, /^#/], // 1.class is not allowed to start with ant, use custom prefixCls, 2. id selector is not allowed
+    'selector-disallowed-list': [/^#/], // id selector is not allowed
     'declaration-no-important': true, // disallow !important within declarations
     'keyframe-declaration-no-important': true, // disallow !important within keyframe declarations
     'no-irregular-whitespace': true, // disallow irregular whitespace
