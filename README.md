@@ -2,6 +2,16 @@
 
 # @tiny-codes/code-style-all-in-one
 
+> All-in-one code style solution
+
+[![npm version](https://img.shields.io/npm/v/@tiny-codes/code-style-all-in-one.svg)](https://www.npmjs.com/package/@tiny-codes/code-style-all-in-one)
+[![npm downloads](https://img.shields.io/npm/dm/@tiny-codes/code-style-all-in-one.svg)](https://www.npmjs.com/package/@tiny-codes/code-style-all-in-one)
+![GitHub License](https://img.shields.io/github/license/shijistar/code-style-all-in-one?label=License&color=%23F68F1E)
+
+⬇️ &nbsp;&nbsp; [Introduction](#introduction) | [Installation](#installation) | [Usage](#usage) &nbsp;&nbsp;⬇️
+
+## Introduction
+
 Provides popular `ESLint`, `Prettier`, `Stylelint` configurations, and a guide to set up `Husky` and `Commitlint` for a project. It is recommended to use this configuration for all projects to maintain a consistent code style.
 
 It's assumed that your project is enabled with typescript by default, if not, you can build your own configuration by combining some presets. For example, `['@tiny-codes/code-style-all-in-one/eslint/config/recommended', '@tiny-codes/code-style-all-in-one/eslint/config/typescript', @tiny-codes/code-style-all-in-one/eslint/config/prettier]`, please node that `@tiny-codes/code-style-all-in-one/eslint/config/prettier` should be the last one.
@@ -10,6 +20,12 @@ It's assumed that your project is enabled with typescript by default, if not, yo
 
 ```bash
 npm install -D @tiny-codes/code-style-all-in-one
+```
+
+Note that some packages (e.g. `stylelint-scss`) are shipped as `optionalDependencies`, so if you do not need them, you can install with `--no-optional` flag.
+
+```bash
+npm install -D @tiny-codes/code-style-all-in-one --no-optional
 ```
 
 ## Usage
@@ -47,18 +63,20 @@ _.stylelintrc.js_
 module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config');
 ```
 
-If you are using `SCSS`, you should use another configuration.
+If you are using `less`, you should use another configuration.
+
+_.stylelintrc.js_
+
+```js
+module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config/less');
+```
+
+Or ff you are using `scss`, you should use scss configuration.
 
 _.stylelintrc.js_
 
 ```js
 module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config/scss');
-```
-
-Note that `stylelint-scss` is shipped as optionalDependencies, so if you are NOT using `SCSS`, and want to strip it from your node_modules, please go back to [Installation](#installation) and add `--no-optional` to the command.
-
-```bash
-npm install -D @tiny-codes/code-style-all-in-one --no-optional
 ```
 
 ### Prettier configuration
