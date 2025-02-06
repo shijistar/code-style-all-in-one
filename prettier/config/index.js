@@ -6,23 +6,23 @@ const config = {
     'prettier-plugin-two-style-order',
     'prettier-plugin-jsdoc',
   ],
-  printWidth: 100,
+  printWidth: 120,
   tabWidth: 2,
   singleQuote: true,
   trailingComma: 'es5',
 
-  // Same as the default value, no need to declare
-  // useTabs: false,
-  // semi: true,
-  // quoteProps: 'as-needed',
-  // proseWrap: 'preserve',
-  // jsxSingleQuote: false,
-  // bracketSpacing: true,
-  // bracketSameLine: false,
-  // htmlWhitespaceSensitivity: 'css',
-  // vueIndentScriptAndStyle: false,
-  // endOfLine: 'lf',
-  // embeddedLanguageFormatting: 'auto',
+  // Same as the default value
+  useTabs: false,
+  semi: true,
+  quoteProps: 'as-needed',
+  proseWrap: 'preserve',
+  jsxSingleQuote: false,
+  bracketSpacing: true,
+  bracketSameLine: false,
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
+  embeddedLanguageFormatting: 'auto',
 
   importOrder: [
     '^react$',
@@ -58,7 +58,7 @@ const config = {
   jsdocSeparateReturnsFromParam: true,
   jsdocSeparateTagGroups: true,
   jsdocCapitalizeDescription: false,
-  jsdocPrintWidth: 60,
+  jsdocPrintWidth: 100,
 
   overrides: [
     {

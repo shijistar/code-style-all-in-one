@@ -53,7 +53,7 @@
 
 /** @type {import('stylelint').Config} */
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-css-modules'],
+  extends: ['stylelint-config-standard', 'stylelint-config-css-modules', 'stylelint-config-prettier'],
   rules: {
     'selector-disallowed-list': [/^#/], // id selector is not allowed
     'declaration-no-important': true, // disallow !important within declarations

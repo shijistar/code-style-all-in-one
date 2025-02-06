@@ -1,4 +1,1 @@
-module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  parserPreset: 'conventional-changelog-angular',
-};
+module.exports = require('./commitlint/config');

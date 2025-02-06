@@ -1,6 +1,6 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended'],
   plugins: ['react'],
   settings: {
     react: {

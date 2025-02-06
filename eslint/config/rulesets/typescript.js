@@ -7,11 +7,7 @@ try {
   /* silent failure */
 }
 
-let tsConfigFiles = [
-  './tsconfig.eslint.json',
-  './tsconfig.json',
-  join(__dirname, 'tsconfig.eslint.json'),
-];
+let tsConfigFiles = ['./tsconfig.eslint.json', './tsconfig.json', join(__dirname, 'tsconfig.eslint.json')];
 tsConfigFiles = tsConfigFiles
   .filter((tsConfigFile) => (existsSync(tsConfigFile) ? tsConfigFile : false))
   .filter(Boolean);
@@ -22,11 +18,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.d.ts', '**/*.mts', '**/*.cts'],
-      extends: [
-        'plugin:import/typescript',
-        'plugin:@typescript-eslint/strict',
-        'plugin:@typescript-eslint/stylistic',
-      ],
+      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/strict', 'plugin:@typescript-eslint/stylistic'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: tsConfigFiles[0],
@@ -47,10 +39,7 @@ module.exports = {
             fixMixedExportsWithInlineTypeSpecifier: false,
           },
         ],
-        '@typescript-eslint/no-explicit-any': [
-          'error',
-          { ignoreRestArgs: true, fixToUnknown: true },
-        ], // Disallow usage of the any type
+        '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true, fixToUnknown: true }], // Disallow usage of the any type
         '@typescript-eslint/no-non-null-assertion': 'off', // Disallow non-null assertion
         '@typescript-eslint/no-use-before-define': [
           'error',
@@ -77,6 +66,10 @@ module.exports = {
             },
             minimumDescriptionLength: 4,
           },
+        ],
+        'eslint-comments/no-restricted-disable': [
+          'error',
+          'react-hooks/exhaustive-deps', // Disallow disabling rules with comments
         ],
       },
     },

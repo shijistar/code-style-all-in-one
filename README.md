@@ -81,15 +81,15 @@ npx husky init
 
 Add `husky` related configuration in `package.json`:
 
-```diff
+```json
 "scripts": {
-+  "prepare": "husky"
+  "prepare": "husky"
 },
-+"lint-staged": {
-+  "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
-+  "*.{css,less,scss}": "stylelint --fix",
-+  "*.{js,jsx,ts,tsx,vue,md,json,css,less,scss}": "prettier --write"
-+},
+"lint-staged": {
+  "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
+  "*.{css,less,scss}": "stylelint --fix",
+  "*.{js,jsx,ts,tsx,vue,md,json,css,less,scss}": "prettier --write"
+},
 ```
 
 Add the following two files to the `.husky` directory:
@@ -117,4 +117,38 @@ _.commitlintrc.js_
 ```js
 const config = require('@tiny-codes/code-style-all-in-one/commitlint/config');
 module.exports = config;
+```
+
+#### Auto generate changelog
+
+Add the following configuration to the `package.json`:
+
+```json
+"scripts": {
+  "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+},
+```
+
+You can change the file name and other parameters as you want.
+
+Note that when committing code, you need to follow the `Conventional Commits` [specification](https://www.conventionalcommits.org/en/v1.0.0/) so that your commits can be included in the changelog. Additionally, before executing this command, you need to tag a new version in the git repository to generate the changelog for the new version.
+
+If you want to handle automated version bumping, tagging and CHANGELOG generation, just like `npm version`, you can add the following configuration to the `package.json`:
+
+```json
+"scripts": {
+  "release": "commit-and-tag-version"
+},
+```
+
+Now you can run `npm run release` to do them all.
+
+You can also add the following configuration to the `package.json` to generate changelog automatically before each commit:
+
+```json
+"husky": {
+  "hooks": {
+    "prepare-commit-msg": "exec < /dev/tty && npm run changelog"
+  }
+},
 ```

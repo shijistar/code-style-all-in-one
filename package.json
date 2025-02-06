@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.6",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -22,6 +22,7 @@
     "stylelint",
     "prettier",
     "commitlint",
+    "husky",
     "lint-staged",
     "CHANGELOG.md",
     "README.md",
@@ -40,6 +41,7 @@
     "@babel/eslint-parser": "^7.24.6",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.5.0",
     "@rushstack/eslint-patch": "^1.10.3",
     "@tanstack/eslint-plugin-query": "^5.35.6",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -47,7 +49,9 @@
     "@types/lint-staged": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
+    "commit-and-tag-version": "^12.5.0",
     "commitlint": "^19.3.0",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.1.0",
@@ -72,7 +76,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
-    "conventional-changelog-cli": "^5.0.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {

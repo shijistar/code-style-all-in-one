@@ -1,3 +1,4 @@
+/** @type {Exclude<import('lint-staged').Config, import('lint-staged').ConfigFn>} */
 module.exports = {
   '*.{md,json}': ['prettier --cache --write'],
   '*.{js,jsx}': ['max lint --fix --eslint-only', 'prettier --cache --write'],

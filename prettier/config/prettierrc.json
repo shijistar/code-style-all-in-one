@@ -6,7 +6,7 @@
     "prettier-plugin-two-style-order",
     "prettier-plugin-jsdoc"
   ],
-  "printWidth": 100,
+  "printWidth": 120,
   "tabWidth": 2,
   "singleQuote": true,
 
@@ -57,7 +57,7 @@
   "jsdocSeparateReturnsFromParam": true,
   "jsdocSeparateTagGroups": true,
   "jsdocCapitalizeDescription": false,
-  "jsdocPrintWidth": 60,
+  "jsdocPrintWidth": 100,
 
   "overrides": [
     {
