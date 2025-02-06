@@ -103,11 +103,6 @@ Add `husky` related configuration in `package.json`:
 "scripts": {
   "prepare": "husky"
 },
-"lint-staged": {
-  "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
-  "*.{css,less,scss}": "stylelint --fix",
-  "*.{js,jsx,ts,tsx,vue,md,json,css,less,scss}": "prettier --write"
-},
 ```
 
 Add the following two files to the `.husky` directory:
@@ -124,6 +119,16 @@ _.husky/commit-msg_
 ```bash
 #!/usr/bin/env sh
 . "node_modules/@tiny-codes/code-style-all-in-one/husky/hooks/commit-msg.sh"
+```
+
+### Lint-staged configuration
+
+Create a `lint-staged.config` file in the project root directory with the following configuration:
+
+_lint-staged.config_
+
+```js
+module.exports = require('@tiny-codes/code-style-all-in-one/lint-staged/config');
 ```
 
 ### Commitlint configuration
