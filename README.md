@@ -6,7 +6,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@tiny-codes/code-style-all-in-one.svg)](https://www.npmjs.com/package/@tiny-codes/code-style-all-in-one)
 [![npm downloads](https://img.shields.io/npm/dm/@tiny-codes/code-style-all-in-one.svg)](https://www.npmjs.com/package/@tiny-codes/code-style-all-in-one)
-![GitHub License](https://img.shields.io/github/license/shijistar/code-style-all-in-one?label=License&color=%23F68F1E)
+![GitHub License](https://img.shields.io/github/license/shijistar/code-style-all-in-one?label=License)
 
 ⬇️ &nbsp;&nbsp; [Introduction](#introduction) | [Installation](#installation) | [Usage](#usage) &nbsp;&nbsp;⬇️
 
@@ -97,35 +97,27 @@ Initialize the `husky`:
 npx husky init
 ```
 
-Add `husky` related configuration in `package.json`:
-
-```json
-"scripts": {
-  "prepare": "husky"
-},
-```
-
 Add the following two files to the `.husky` directory:
 
 _.husky/pre-commit_
 
 ```bash
 #!/usr/bin/env sh
-. "node_modules/@tiny-codes/code-style-all-in-one/husky/hooks/pre-commit.sh"
+. "node_modules/@tiny-codes/code-style-all-in-one/husky/hooks/pre-commit"
 ```
 
 _.husky/commit-msg_
 
 ```bash
 #!/usr/bin/env sh
-. "node_modules/@tiny-codes/code-style-all-in-one/husky/hooks/commit-msg.sh"
+. "node_modules/@tiny-codes/code-style-all-in-one/husky/hooks/commit-msg"
 ```
 
 ### Lint-staged configuration
 
-Create a `lint-staged.config` file in the project root directory with the following configuration:
+Create a `lint-staged.config.js` file in the project root directory with the following configuration:
 
-_lint-staged.config_
+_lint-staged.config.js_
 
 ```js
 module.exports = require('@tiny-codes/code-style-all-in-one/lint-staged/config');
