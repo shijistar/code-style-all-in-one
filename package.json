@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -34,18 +34,18 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.6",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@commitlint/types": "^19.5.0",
     "@rushstack/eslint-patch": "^1.10.3",
     "@tanstack/eslint-plugin-query": "^5.35.6",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/eslint": "^8.56.10",
     "@types/lint-staged": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
     "commit-and-tag-version": "^12.5.0",
-    "commitlint": "^19.3.0",
+    "commitlint": "^19.7.1",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.3",
@@ -58,34 +58,37 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-unicorn": "^53.0.0",
     "eslint-plugin-vue": "^9.26.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss-less": "^6.0.0",
-    "prettier": "^3.3.1",
-    "prettier-plugin-jsdoc": "^1.3.0",
-    "prettier-plugin-packagejson": "^2.5.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-jsdoc": "^1.3.2",
+    "prettier-plugin-packagejson": "^2.5.8",
     "prettier-plugin-two-style-order": "^1.0.1",
-    "stylelint": "^16.6.1",
+    "stylelint": "^16.14.1",
     "stylelint-config-css-modules": "^4.4.0",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.17.17",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0",
-    "prettier": ">=3.2.5",
-    "stylelint": ">=16.1.0",
-    "typescript": ">=5.0.0"
+    "prettier": ">=2.0.0",
+    "stylelint": ">=13.0.0",
+    "typescript": ">=4.5.0"
   },
   "peerDependenciesMeta": {
     "eslint": {
       "optional": true
     },
     "prettier": {
+      "optional": true
+    },
+    "stylelint": {
       "optional": true
     },
     "typescript": {
