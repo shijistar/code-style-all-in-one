@@ -18,6 +18,7 @@ module.exports = {
         supportsTopLevelAwait: true,
       },
     },
+    project: require('fs').existsSync('./tsconfig.eslint.json') ? './tsconfig.eslint.json' : undefined,
   },
   env: {
     browser: true,

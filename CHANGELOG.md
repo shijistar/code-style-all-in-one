@@ -1,5 +1,15 @@
 # @tiny-codes/code-style-all-in-one
 
+## v1.1.1
+
+`2025-02-08`
+
+### Features
+
+- 🛠 Replace the deprecated `eslint-plugin-eslint-comments` with `@eslint-community/eslint-plugin-eslint-comments`
+- 🛠 eslint configuration prefers to use `tsconfig.eslint.json` if it exists
+- 🛠 Bump dependencies to latest versions
+
 ## v1.1.0
 
 `2025-02-08`

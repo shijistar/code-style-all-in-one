@@ -62,14 +62,10 @@ module.exports = {
             'ts-ignore': true,
             // For example: //@ts-expect-error: TS1234 because this is an error example
             'ts-expect-error': {
-              descriptionFormat: '^:\\s(因为|because( of)?|since).+$',
+              descriptionFormat: '^:\\s(因为|由于|because( of)?|since|TS\\d{4}).+$',
             },
             minimumDescriptionLength: 4,
           },
-        ],
-        'eslint-comments/no-restricted-disable': [
-          'error',
-          'react-hooks/exhaustive-deps', // Disallow disabling rules with comments
         ],
       },
     },
