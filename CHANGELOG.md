@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v1.1.2
+
+`2025-02-11`
+
+### Features
+
+- 🛠 Bump `@tanstack/eslint-plugin-query` version
+
 ## v1.1.1
 
 `2025-02-08`

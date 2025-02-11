@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -39,7 +39,7 @@
     "@commitlint/types": "^19.5.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@rushstack/eslint-patch": "^1.10.3",
-    "@tanstack/eslint-plugin-query": "^5.35.6",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/eslint": "^8.56.10",
     "@types/lint-staged": "^13.3.0",

@@ -27,8 +27,8 @@ importers:
         specifier: ^1.10.3
         version: 1.10.5
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.35.6
-        version: 5.66.0(eslint@8.57.1)(typescript@5.7.3)
+        specifier: ^5.66.1
+        version: 5.66.1(eslint@8.57.1)(typescript@5.7.3)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.2
         version: 5.2.2(prettier@3.4.2)
@@ -445,8 +445,8 @@ packages:
   '@rushstack/eslint-patch@1.10.5':
     resolution: {integrity: sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==}
 
-  '@tanstack/eslint-plugin-query@5.66.0':
-    resolution: {integrity: sha512-CzZhBxicLDuuSJbkZ4nPcuBqWnhLu72Zt9p/7qLQ93BepVnZJV6ZDlBLBuN5eg7YRACwECPLsntnwo1zuhgseQ==}
+  '@tanstack/eslint-plugin-query@5.66.1':
+    resolution: {integrity: sha512-pYMVTGgJ7yPk9Rm6UWEmbY6TX0EmMmxJqYkthgeDCwEznToy2m+W928nUODFirtZBZlhBsqHy33LO0kyTlgf0w==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -3791,7 +3791,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.5': {}
 
-  '@tanstack/eslint-plugin-query@5.66.0(eslint@8.57.1)(typescript@5.7.3)':
+  '@tanstack/eslint-plugin-query@5.66.1(eslint@8.57.1)(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.23.0(eslint@8.57.1)(typescript@5.7.3)
       eslint: 8.57.1
