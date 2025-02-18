@@ -4,7 +4,7 @@
 
 /** @type {import('stylelint').Config} */
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-css-modules', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-standard', 'stylelint-config-css-modules'],
   plugins: ['stylelint-declaration-block-no-ignored-properties'],
   rules: {
     'no-descending-specificity': null,

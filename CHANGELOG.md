@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v1.1.3
+
+`2025-02-18`
+
+### Features
+
+- 🛠 remove `stylelint-config-prettier` from `stylelint` config
+
 ## v1.1.2
 
 `2025-02-11`
