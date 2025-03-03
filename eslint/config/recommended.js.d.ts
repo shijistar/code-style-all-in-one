@@ -1,4 +1,4 @@
 import type { ESLint } from 'eslint';
 
-declare type ConfigData = ESLint.ConfigData;
-export default ConfigData;
+declare const config: ESLint.ConfigData;
+export default config;

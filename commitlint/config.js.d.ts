@@ -1,3 +1,4 @@
 import type { UserConfig } from '@commitlint/types';
 
-export default UserConfig;
+declare const config: UserConfig;
+export default config;

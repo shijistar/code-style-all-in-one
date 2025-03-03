@@ -1,3 +1,2 @@
-import type { Config, ConfigFn } from 'lint-staged';
-
-export default Exclude<Config, ConfigFn>;
+declare const config: Record<string, string>;
+export default config;

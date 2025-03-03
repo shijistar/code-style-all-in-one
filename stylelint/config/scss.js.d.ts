@@ -1,3 +1,4 @@
-import { Config } from 'stylelint';
+import type { Config } from 'stylelint';
 
-export default Config;
+declare const config: Config;
+export default config;

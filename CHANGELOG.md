@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v1.1.4
+
+`2025-03-03`
+
+### Features
+
+- 🛠 improve config typing declaration
+
 ## v1.1.3
 
 `2025-02-18`
