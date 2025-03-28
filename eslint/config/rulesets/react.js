@@ -11,7 +11,7 @@ module.exports = {
   rules: {
     'react/no-array-index-key': ['error'], // Prevent using array index in keys
     'react-hooks/exhaustive-deps': ['error'], // Checks effect dependencies
-    'eslint-comments/no-restricted-disable': [
+    '@eslint-community/eslint-comments/no-restricted-disable': [
       ...eslintComments.rules['@eslint-community/eslint-comments/no-restricted-disable'],
       'react-hooks/exhaustive-deps', // Disallow disabling rules with comments
     ],

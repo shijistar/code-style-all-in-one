@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v1.1.5
+
+`2025-03-28`
+
+### Bug Fixes
+
+- 🛠 fix `eslint-comments/no-restricted-disable` missing rule
+
 ## v1.1.4
 
 `2025-03-03`
