@@ -1,17 +1,12 @@
 /**
- * Merge ESLint configuration objects, support multiple
- * configuration objects, the latter configuration object
- * will override the former configuration object
+ * Merge ESLint configuration objects, support multiple configuration objects, the latter
+ * configuration object will override the former configuration object
  *
- * @param {...import('eslint').ESLint.ConfigData} configs -
- *   ESLint configuration objects to merge, the latter
- *   configuration object will override the former
- *   configuration object. None of the configuration objects
- *   will be modified, and a new configuration object will
- *   be returned.
+ * @param {...import('eslint').ESLint.ConfigData} configs - ESLint configuration objects to merge,
+ *   the latter configuration object will override the former configuration object. None of the
+ *   configuration objects will be modified, and a new configuration object will be returned.
  *
- * @returns {import('eslint').ESLint.ConfigData} - The
- *   merged ESLint configuration object.
+ * @returns {import('eslint').ESLint.ConfigData} - The merged ESLint configuration object.
  */
 function mergeConfig(...configs) {
   return configs.reduce(
