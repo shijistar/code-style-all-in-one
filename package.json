@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "1.1.5",
+  "version": "2.0.0-beta.1",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -16,8 +16,107 @@
     "url": "https://github.com/shijistar/code-style-all-in-one"
   },
   "author": "李凤宝(Leo) <shijistar@gmail.com>",
-  "main": "index.js",
+  "exports": {
+    "./commitlint": {
+      "types": "./lib/commitlint/config.d.ts",
+      "import": "./es/commitlint/config.js",
+      "require": "./lib/commitlint/config.js",
+      "default": "./lib/commitlint/config.js"
+    },
+    "./lint-staged": {
+      "types": "./lib/lint-staged/config/index.d.ts",
+      "import": "./es/lint-staged/config/index.js",
+      "require": "./lib/lint-staged/config/index.js",
+      "default": "./lib/lint-staged/config/index.js"
+    },
+    "./prettier": {
+      "types": "./lib/prettier/config/index.d.ts",
+      "import": "./es/prettier/config/index.js",
+      "require": "./lib/prettier/config/index.js",
+      "default": "./lib/prettier/config/index.js"
+    },
+    "./stylelint": {
+      "types": "./lib/stylelint/config/index.d.ts",
+      "import": "./es/stylelint/config/index.js",
+      "require": "./lib/stylelint/config/index.js",
+      "default": "./lib/stylelint/config/index.js"
+    },
+    "./stylelint/less": {
+      "types": "./lib/stylelint/config/less.d.ts",
+      "import": "./es/stylelint/config/less.js",
+      "require": "./lib/stylelint/config/less.js",
+      "default": "./lib/stylelint/config/less.js"
+    },
+    "./stylelint/scss": {
+      "types": "./lib/stylelint/config/scss.d.ts",
+      "import": "./es/stylelint/config/scss.js",
+      "require": "./lib/stylelint/config/scss.js",
+      "default": "./lib/stylelint/config/scss.js"
+    },
+    "./eslint/base": {
+      "types": "./lib/eslint/config/base.d.ts",
+      "import": "./es/eslint/config/base.js",
+      "require": "./lib/eslint/config/base.js",
+      "default": "./lib/eslint/config/base.js"
+    },
+    "./eslint/next-all": {
+      "types": "./lib/eslint/config/next-all.d.ts",
+      "import": "./es/eslint/config/next-all.js",
+      "require": "./lib/eslint/config/next-all.js",
+      "default": "./lib/eslint/config/next-all.js"
+    },
+    "./eslint/next-recommended": {
+      "types": "./lib/eslint/config/next-recommended.d.ts",
+      "import": "./es/eslint/config/next-recommended.js",
+      "require": "./lib/eslint/config/next-recommended.js",
+      "default": "./lib/eslint/config/next-recommended.js"
+    },
+    "./eslint/prettier": {
+      "types": "./lib/eslint/config/prettier.d.ts",
+      "import": "./es/eslint/config/prettier.js",
+      "require": "./lib/eslint/config/prettier.js",
+      "default": "./lib/eslint/config/prettier.js"
+    },
+    "./eslint/react-all": {
+      "types": "./lib/eslint/config/react-all.d.ts",
+      "import": "./es/eslint/config/react-all.js",
+      "require": "./lib/eslint/config/react-all.js",
+      "default": "./lib/eslint/config/react-all.js"
+    },
+    "./eslint/react-recommended": {
+      "types": "./lib/eslint/config/react-recommended.d.ts",
+      "import": "./es/eslint/config/react-recommended.js",
+      "require": "./lib/eslint/config/react-recommended.js",
+      "default": "./lib/eslint/config/react-recommended.js"
+    },
+    "./eslint/typescript": {
+      "types": "./lib/eslint/config/typescript.d.ts",
+      "import": "./es/eslint/config/typescript.js",
+      "require": "./lib/eslint/config/typescript.js",
+      "default": "./lib/eslint/config/typescript.js"
+    },
+    "./eslint/vue-all": {
+      "types": "./lib/eslint/config/vue-all.d.ts",
+      "import": "./es/eslint/config/vue-all.js",
+      "require": "./lib/eslint/config/vue-all.js",
+      "default": "./lib/eslint/config/vue-all.js"
+    },
+    "./eslint/vue-recommended": {
+      "types": "./lib/eslint/config/vue-recommended.d.ts",
+      "import": "./es/eslint/config/vue-recommended.js",
+      "require": "./lib/eslint/config/vue-recommended.js",
+      "default": "./lib/eslint/config/vue-recommended.js"
+    },
+    "./eslint/vue-typescript": {
+      "types": "./lib/eslint/config/vue-typescript.d.ts",
+      "import": "./es/eslint/config/vue-typescript.js",
+      "require": "./lib/eslint/config/vue-typescript.js",
+      "default": "./lib/eslint/config/vue-typescript.js"
+    }
+  },
   "files": [
+    "es",
+    "lib",
     "eslint",
     "stylelint",
     "prettier",
@@ -30,7 +129,12 @@
     "tsconfig.eslint.json"
   ],
   "scripts": {
-    "prepare": "husky"
+    "build": "run-s build-core copy-lib fix-es",
+    "build-core": "father build",
+    "copy-lib": "tsx scripts/copy-lib.ts",
+    "fix-es": "tsx scripts/fix-es.ts",
+    "prepare": "husky",
+    "prepublishOnly": "run-s build"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.6",
@@ -48,7 +152,7 @@
     "commit-and-tag-version": "^12.5.0",
     "commitlint": "^19.7.1",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^8.57.0",
+    "eslint": ">=8.0.0",
     "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
@@ -61,11 +165,11 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "postcss-less": "^6.0.0",
-    "prettier": "^3.4.2",
+    "prettier": ">=2.0.0",
     "prettier-plugin-jsdoc": "^1.3.2",
     "prettier-plugin-packagejson": "^2.5.8",
     "prettier-plugin-two-style-order": "^1.0.1",
-    "stylelint": "^16.14.1",
+    "stylelint": ">=13.0.0",
     "stylelint-config-css-modules": "^4.4.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
@@ -73,6 +177,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.17.17",
+    "father": "^4.6.17",
+    "npm-run-all2": "^8.0.4",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {

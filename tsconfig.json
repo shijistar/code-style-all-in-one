@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -18,6 +17,6 @@
     "noUnusedParameters": false,
     "noImplicitAny": true,
     "resolveJsonModule": true,
-    "allowJs": true
+    "allowJs": false
   }
 }

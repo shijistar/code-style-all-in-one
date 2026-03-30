@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v2.0.0-beta.1
+
+`2026-03-31`
+
+### Feature
+
+- Rewrite library in TypeScript, and publish both `esm` and `commonJS` versions.
+
 ## v1.1.5
 
 `2025-03-28`
