@@ -133,8 +133,8 @@
     "build-core": "father build",
     "copy-lib": "tsx scripts/copy-lib.ts",
     "fix-es": "tsx scripts/fix-es.ts",
-    "prepare": "husky",
-    "prepublishOnly": "run-s build"
+    "prepare_": "husky",
+    "prepublishOnly": "build"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.6",
