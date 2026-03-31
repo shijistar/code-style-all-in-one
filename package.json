@@ -205,9 +205,7 @@
   "optionalDependencies": {
     "stylelint-scss": "^6.3.1"
   },
-  "packageManager": "pnpm@10.2.0",
   "engines": {
-    "node": ">=20.10.0",
-    "pnpm": ">=10.2.0"
+    "node": ">=20.10.0"
   }
 }
