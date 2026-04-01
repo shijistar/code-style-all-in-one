@@ -10,7 +10,7 @@ const config: Config = {
   printWidth: 120,
   tabWidth: 2,
   singleQuote: true,
-  trailingComma: 'es5',
+  trailingComma: 'all',
 
   // Same as the default value
   useTabs: false,
@@ -39,6 +39,7 @@ const config: Config = {
     '^umi/',
     '^@umijs/',
     '<THIRD_PARTY_MODULES>',
+    'antd',
     '^@ant-design',
     '^element-plus',
     '^element-ui',

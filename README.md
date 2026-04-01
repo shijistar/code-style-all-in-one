@@ -32,9 +32,9 @@ npm install -D @tiny-codes/code-style-all-in-one --no-optional
 
 ### Eslint configuration
 
-Create a `.eslintrc.js` file in the project root directory with the following configuration:
+Create a `.eslintrc.cjs` file in the project root directory with the following configuration:
 
-_.eslintrc.js_
+_.eslintrc.cjs_
 
 ```js
 module.exports = {
@@ -55,38 +55,38 @@ module.exports = {
 
 ### Stylelint configuration
 
-Create a `.stylelintrc.js` file in the project root directory.
+Create a `.stylelintrc.mjs` file in the project root directory.
 
-_.stylelintrc.js_
+_.stylelintrc.mjs_
 
 ```js
-module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config');
+export { default } from '@tiny-codes/code-style-all-in-one/stylelint';
 ```
 
 If you are using `less`, you should use another configuration.
 
-_.stylelintrc.js_
+_.stylelintrc.mjs_
 
 ```js
-module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config/less');
+export { default } from '@tiny-codes/code-style-all-in-one/stylelint/less';
 ```
 
 Or ff you are using `scss`, you should use scss configuration.
 
-_.stylelintrc.js_
+_.stylelintrc.mjs_
 
 ```js
-module.exports = require('@tiny-codes/code-style-all-in-one/stylelint/config/scss');
+export { default } from '@tiny-codes/code-style-all-in-one/stylelint/scss';
 ```
 
 ### Prettier configuration
 
-Create a `.prettierrc.js` file in the project root directory.
+Create a `.prettierrc.mjs` file in the project root directory.
 
-_.prettierrc.js_
+_.prettierrc.mjs_
 
 ```js
-module.exports = require('@tiny-codes/code-style-all-in-one/prettier/config');
+export { default } from '@tiny-codes/code-style-all-in-one/prettier';
 ```
 
 ### Husky configuration
@@ -115,23 +115,22 @@ _.husky/commit-msg_
 
 ### Lint-staged configuration
 
-Create a `lint-staged.config.js` file in the project root directory with the following configuration:
+Create a `lint-staged.config.mjs` file in the project root directory with the following configuration:
 
-_lint-staged.config.js_
+_lint-staged.config.mjs_
 
 ```js
-module.exports = require('@tiny-codes/code-style-all-in-one/lint-staged/config');
+export { default } from '@tiny-codes/code-style-all-in-one/lint-staged';
 ```
 
 ### Commitlint configuration
 
-Create a `.commitlintrc.js` file in the project root directory with the following configuration:
+Create a `.commitlintrc.mjs` file in the project root directory with the following configuration:
 
-_.commitlintrc.js_
+_.commitlintrc.mjs_
 
 ```js
-const config = require('@tiny-codes/code-style-all-in-one/commitlint/config');
-module.exports = config;
+export { default } from '@tiny-codes/code-style-all-in-one/commitlint';
 ```
 
 #### Auto generate changelog

@@ -1,0 +1,162 @@
+/* 基本选择器 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  text-align: center;
+}
+
+/* 类选择器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+}
+
+/* id选择器 */
+.main-btn {
+  padding: 0.75rem 2rem;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.main-btn:hover {
+  background: #0056b3;
+}
+
+/* 伪类和伪元素 */
+a:link {
+  color: #007bff;
+}
+
+a:visited {
+  color: #6610f2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #dc3545;
+}
+
+ul li:first-child {
+  font-weight: bold;
+}
+
+ul li:last-child {
+  color: #dc3545;
+}
+
+ul li:nth-child(even) {
+  background: #f8f9fa;
+}
+
+p::first-letter {
+  color: #007bff;
+  font-size: 2em;
+}
+
+p::selection {
+  background: #ffe082;
+}
+
+/* 属性选择器 */
+input[type='text'] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[disabled] {
+  background: #eee;
+}
+
+/* 媒体查询 */
+@media (width <= 600px) {
+  .container {
+    width: 98vw;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 动画与过渡 */
+.fade-in {
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 网格布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-item {
+  padding: 1rem;
+  text-align: center;
+  background: #e3f2fd;
+  border-radius: 6px;
+}
+
+/* 变量 */
+:root {
+  --main-color: #007bff;
+  --danger-color: #dc3545;
+}
+
+.var-demo {
+  padding: 0.5rem;
+  color: var(--main-color);
+  border: 1px solid var(--danger-color);
+}
+
+/* 其他常用属性 */
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #ffc107;
+  border: 2px dashed #333;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 20%);
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow-demo {
+  width: 200px;
+  height: 60px;
+  overflow: auto;
+  border: 1px solid #ccc;
+}

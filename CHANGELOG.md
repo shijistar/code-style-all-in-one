@@ -1,12 +1,14 @@
 # @tiny-codes/code-style-all-in-one
 
-## v2.0.0-beta.1
+## v2.0.0
 
-`2026-03-31`
+`2026-4-1`
 
 ### Feature
 
 - Rewrite library in TypeScript, and publish both `esm` and `commonJS` versions.
+- Bump dependencies to latest versions (except eslint)
+- Update documentation that all configuration files are now using `mjs` format
 
 ## v1.1.5
 
