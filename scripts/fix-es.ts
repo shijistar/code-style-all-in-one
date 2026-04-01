@@ -24,7 +24,7 @@ async function fixModuleExports() {
     const newContent = content.replace(exportRegex, '');
     if (newContent !== content) {
       await fs.writeFile(file, newContent, 'utf8');
-      console.log(`Fixed: ${file}`);
+      // console.log(`Fixed: ${file}`);
     }
   }
 }

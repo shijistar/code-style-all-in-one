@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shijistar/code-style-all-in-one"
+    "url": "git+https://github.com/shijistar/code-style-all-in-one"
   },
   "author": "李凤宝(Leo) <shijistar@gmail.com>",
   "exports": {
@@ -134,7 +134,7 @@
     "copy-lib": "tsx scripts/copy-lib.ts",
     "fix-es": "tsx scripts/fix-es.ts",
     "prepare_": "husky",
-    "prepublishOnly": "build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.6",
@@ -207,5 +207,8 @@
   },
   "engines": {
     "node": ">=20.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
