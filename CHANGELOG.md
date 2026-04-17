@@ -1,5 +1,14 @@
 # @tiny-codes/code-style-all-in-one
 
+## v2.0.1
+
+`2026-4-17`
+
+### Feature
+
+- Remove `commit-and-tag-version` dependency
+- Remove deprecated `@types/lint-staged` dependency
+
 ## v2.0.0
 
 `2026-4-1`

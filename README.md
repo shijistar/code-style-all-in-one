@@ -151,7 +151,7 @@ If you want to handle automated version bumping, tagging and CHANGELOG generatio
 
 ```json
 "scripts": {
-  "release": "commit-and-tag-version"
+  "release": "npx commit-and-tag-version"
 },
 ```
 
