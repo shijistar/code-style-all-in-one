@@ -1,7 +1,7 @@
 import type { Config } from 'stylelint';
 import base from './index';
 
-const config = {
+const config: Config = {
   ...base,
   rules: {
     ...(base.rules ?? {}),

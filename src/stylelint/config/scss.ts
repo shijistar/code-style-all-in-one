@@ -1,7 +1,7 @@
 import type { Config } from 'stylelint';
 import base from './index';
 
-const config = {
+const config: Config = {
   ...base,
   extends: [...(base.extends ?? []), 'stylelint-config-standard-scss'],
 } satisfies Config;

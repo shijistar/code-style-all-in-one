@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v2.0.2
+
+`2026-7-5`
+
+### Features
+
+- Update typescript peer dependency to support version `6.0.0`
+
 ## v2.0.1
 
 `2026-4-17`
@@ -13,7 +21,7 @@
 
 `2026-4-1`
 
-### Feature
+### Features
 
 - Rewrite library in TypeScript, and publish both `esm` and `commonJS` versions.
 - Bump dependencies to latest versions (except eslint)
