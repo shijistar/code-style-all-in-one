@@ -1,0 +1,16 @@
+src/stylelint/config/less.ts
+  h_3a0b15d296f1fe 4
+src/stylelint/config/scss.ts
+  h_3a0b15d296f1fe 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "60dab9758ef37cb395e1153e5ada6c28710e8ffc",
+  "prompts": {},
+  "humans": {
+    "h_3a0b15d296f1fe": {
+      "author": "Sage Starr (李凤宝) <shijistar@gmail.com>"
+    }
+  }
+}
