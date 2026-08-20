@@ -55,61 +55,61 @@
     },
     "./eslint/base": {
       "types": "./lib/eslint/config/base.d.ts",
-      "import": "./lib/eslint/config/base.js",
+      "import": "./es/eslint/config/base.js",
       "require": "./lib/eslint/config/base.js",
       "default": "./lib/eslint/config/base.js"
     },
     "./eslint/next-all": {
       "types": "./lib/eslint/config/next-all.d.ts",
-      "import": "./lib/eslint/config/next-all.js",
+      "import": "./es/eslint/config/next-all.js",
       "require": "./lib/eslint/config/next-all.js",
       "default": "./lib/eslint/config/next-all.js"
     },
     "./eslint/next-recommended": {
       "types": "./lib/eslint/config/next-recommended.d.ts",
-      "import": "./lib/eslint/config/next-recommended.js",
+      "import": "./es/eslint/config/next-recommended.js",
       "require": "./lib/eslint/config/next-recommended.js",
       "default": "./lib/eslint/config/next-recommended.js"
     },
     "./eslint/prettier": {
       "types": "./lib/eslint/config/prettier.d.ts",
-      "import": "./lib/eslint/config/prettier.js",
+      "import": "./es/eslint/config/prettier.js",
       "require": "./lib/eslint/config/prettier.js",
       "default": "./lib/eslint/config/prettier.js"
     },
     "./eslint/react-all": {
       "types": "./lib/eslint/config/react-all.d.ts",
-      "import": "./lib/eslint/config/react-all.js",
+      "import": "./es/eslint/config/react-all.js",
       "require": "./lib/eslint/config/react-all.js",
       "default": "./lib/eslint/config/react-all.js"
     },
     "./eslint/react-recommended": {
       "types": "./lib/eslint/config/react-recommended.d.ts",
-      "import": "./lib/eslint/config/react-recommended.js",
+      "import": "./es/eslint/config/react-recommended.js",
       "require": "./lib/eslint/config/react-recommended.js",
       "default": "./lib/eslint/config/react-recommended.js"
     },
     "./eslint/typescript": {
       "types": "./lib/eslint/config/typescript.d.ts",
-      "import": "./lib/eslint/config/typescript.js",
+      "import": "./es/eslint/config/typescript.js",
       "require": "./lib/eslint/config/typescript.js",
       "default": "./lib/eslint/config/typescript.js"
     },
     "./eslint/vue-all": {
       "types": "./lib/eslint/config/vue-all.d.ts",
-      "import": "./lib/eslint/config/vue-all.js",
+      "import": "./es/eslint/config/vue-all.js",
       "require": "./lib/eslint/config/vue-all.js",
       "default": "./lib/eslint/config/vue-all.js"
     },
     "./eslint/vue-recommended": {
       "types": "./lib/eslint/config/vue-recommended.d.ts",
-      "import": "./lib/eslint/config/vue-recommended.js",
+      "import": "./es/eslint/config/vue-recommended.js",
       "require": "./lib/eslint/config/vue-recommended.js",
       "default": "./lib/eslint/config/vue-recommended.js"
     },
     "./eslint/vue-typescript": {
       "types": "./lib/eslint/config/vue-typescript.d.ts",
-      "import": "./lib/eslint/config/vue-typescript.js",
+      "import": "./es/eslint/config/vue-typescript.js",
       "require": "./lib/eslint/config/vue-typescript.js",
       "default": "./lib/eslint/config/vue-typescript.js"
     }

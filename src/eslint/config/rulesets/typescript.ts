@@ -2,6 +2,7 @@ import * as tseslintNS from '@typescript-eslint/eslint-plugin';
 import * as typescriptParserNS from '@typescript-eslint/parser';
 import * as importPlugin from 'eslint-plugin-import';
 import type { ESLint, Linter } from 'eslint';
+import { createRequire } from 'node:module';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,6 +10,11 @@ import { unwrap } from '../utils/interop';
 
 /* eslint-disable @typescript-eslint/no-require-imports -- require.resolve() is
    required to obtain absolute module paths for the import/resolver settings. */
+
+const resolve =
+  typeof import.meta === 'object' && import.meta.url
+    ? (spec: string) => createRequire(import.meta.url).resolve(spec)
+    : (spec: string) => require.resolve(spec);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const tseslint = unwrap(tseslintNS as any);
@@ -44,13 +50,13 @@ const config: Linter.Config[] = [
     name: 'tiny-codes/typescript/resolver-settings',
     settings: {
       'import/parsers': {
-        [require.resolve('@typescript-eslint/parser')]: ['.ts', '.mts', '.cts', '.tsx', '.d.ts'],
+        [resolve('@typescript-eslint/parser')]: ['.ts', '.mts', '.cts', '.tsx', '.d.ts'],
       },
       'import/resolver': {
-        [require.resolve('eslint-import-resolver-node')]: {
+        [resolve('eslint-import-resolver-node')]: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
-        [require.resolve('eslint-import-resolver-typescript')]: {
+        [resolve('eslint-import-resolver-typescript')]: {
           alwaysTryTypes: true,
         },
       },
