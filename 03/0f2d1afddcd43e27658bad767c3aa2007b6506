@@ -1,0 +1,77 @@
+src/eslint/config/next-all.ts
+  h_99cad05bea77d1 1,4,10
+src/eslint/config/rulesets/recommended-base.ts
+  h_99cad05bea77d1 3,10
+  h_99cad05bea77d1 2
+src/eslint/config/rulesets/others.ts
+  h_99cad05bea77d1 12
+src/prettier/config/index.ts
+  h_99cad05bea77d1 77
+src/eslint/config/rulesets/next.ts
+  h_99cad05bea77d1 12
+src/eslint/config/rulesets/vue-ts.ts
+  h_99cad05bea77d1 2,33
+src/eslint/config/rulesets/typescript.ts
+  h_99cad05bea77d1 4,126
+src/stylelint/config/less.ts
+  h_99cad05bea77d1 17
+src/stylelint/config/scss.ts
+  h_99cad05bea77d1 11
+src/eslint/config/recommended.ts
+  h_99cad05bea77d1 1,5,11
+src/eslint/config/react-recommended.ts
+  h_99cad05bea77d1 1,6,12
+src/eslint/config/rulesets/eslint-comments.ts
+  h_99cad05bea77d1 29
+src/lint-staged/config/index.ts
+  h_99cad05bea77d1 9
+src/eslint/config/rulesets/react.ts
+  h_99cad05bea77d1 52
+src/eslint/config/vue-typescript.ts
+  h_99cad05bea77d1 1,5,11
+src/eslint/config/typescript.ts
+  h_99cad05bea77d1 1,4,10
+src/eslint/config/prettier.ts
+  h_99cad05bea77d1 3,9
+  h_99cad05bea77d1 2
+src/eslint/config/vue-all.ts
+  h_99cad05bea77d1 1,3,10
+src/stylelint/config/index.ts
+  h_99cad05bea77d1 50
+src/eslint/config/react-all.ts
+  h_99cad05bea77d1 1,4,10
+src/eslint/config/vue-recommended.ts
+  h_99cad05bea77d1 1,5,11
+src/eslint/config/rulesets/prettier.ts
+  h_99cad05bea77d1 12
+src/eslint/config/rulesets/react-query.ts
+  h_99cad05bea77d1 12
+tsconfig.json
+  h_99cad05bea77d1 7
+package.json
+  h_99cad05bea77d1 132,137-138
+src/eslint/config/rulesets/vue.ts
+  h_99cad05bea77d1 12
+src/eslint/config/next-recommended.ts
+  h_99cad05bea77d1 1,6,12
+src/commitlint/config.ts
+  h_99cad05bea77d1 10
+src/eslint/config/base.ts
+  h_99cad05bea77d1 3,9
+  h_99cad05bea77d1 2
+src/eslint/config/rulesets/base.ts
+  h_99cad05bea77d1 1,6,57
+scripts/add-esm-extensions.ts
+  h_99cad05bea77d1 1-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "030f2d1afddcd43e27658bad767c3aa2007b6506",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
