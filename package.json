@@ -138,31 +138,31 @@
     "task:add-es-extensions": "tsx scripts/add-esm-extensions.ts es"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.24.6",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/types": "^20.5.0",
+    "@babel/eslint-parser": "^8.0.1",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/types": "^21.2.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^9.39.5",
     "@rushstack/eslint-patch": "^1.10.3",
     "@tanstack/eslint-plugin-query": "^5.66.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/eslint": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "commitlint": "^20.5.0",
+    "commitlint": "^21.2.2",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^9.0.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "^16.0.0",
     "eslint-config-prettier": "^10.0.0",
-    "eslint-import-resolver-node": "^0.3.9",
-    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-import-resolver-node": "^0.4.0",
+    "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-unicorn": "^53.0.0",
+    "eslint-plugin-unicorn": "^65.0.1",
     "eslint-plugin-vue": "^10.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.3.0",
     "postcss-less": "^6.0.0",
     "prettier": "^3.0.0",
     "prettier-plugin-jsdoc": "^1.8.0",
@@ -175,9 +175,9 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0"
   },
   "devDependencies": {
-    "@types/node": "^22.19.15",
+    "@types/node": "^24.13.3",
     "father": "^4.6.17",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
@@ -205,7 +205,7 @@
     "stylelint-scss": "^6.3.1"
   },
   "engines": {
-    "node": ">=20.10.0"
+    "node": ">=24.1.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

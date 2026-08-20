@@ -9,13 +9,11 @@
 - Upgrade `eslint` to `^9.0.0`, and migrate all ESLint presets to the **flat config** format.
   - Consumers must now use `eslint.config.mjs` + an import array, instead of `.eslintrc.cjs` + `extends`.
   - The preset export paths changed from `@tiny-codes/code-style-all-in-one/eslint/config/<name>` to `@tiny-codes/code-style-all-in-one/eslint/<name>`.
-  - The `next-recommended` / `next-all` presets now require `next` to be installed in the consumer project.
 
 ### Features
 
 - Upgrade to ESLint 9 flat config for all presets: `@typescript-eslint` v8, `eslint-plugin-vue` v10, `eslint-config-next` v16, `eslint-config-prettier` v10.
-- Add internal interop shim to reliably load ESLint plugin / parser objects across ESM and CJS builds.
-- Remove the unused `eslint-config-standard` dependency (ESLint 9 incompatible and not referenced in source).
+- Remove the unused `eslint-config-standard` dependency.
 
 ## v2.0.2
 
