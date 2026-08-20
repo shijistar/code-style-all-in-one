@@ -9,4 +9,4 @@ const config: Linter.Config[] = query.configs['flat/recommended'];
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

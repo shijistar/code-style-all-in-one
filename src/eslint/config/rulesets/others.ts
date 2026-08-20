@@ -9,4 +9,4 @@ const config: Linter.Config[] = [unicorn.configs['flat/recommended']];
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

@@ -1,9 +1,9 @@
+import * as babelParserNS from '@babel/eslint-parser';
 import * as js from '@eslint/js';
 import * as importPlugin from 'eslint-plugin-import';
-import * as babelParserNS from '@babel/eslint-parser';
 import * as globalsNS from 'globals';
-import { existsSync } from 'node:fs';
 import type { Linter } from 'eslint';
+import { existsSync } from 'node:fs';
 import { unwrap } from '../utils/interop';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -54,4 +54,4 @@ const config: Linter.Config[] = [
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

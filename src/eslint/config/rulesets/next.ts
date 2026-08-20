@@ -9,4 +9,4 @@ const config: Linter.Config[] = nextConfig;
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

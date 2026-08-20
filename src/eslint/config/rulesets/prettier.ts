@@ -9,4 +9,4 @@ const config: Linter.Config[] = [prettierRecommended];
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

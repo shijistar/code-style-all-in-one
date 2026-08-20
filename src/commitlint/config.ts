@@ -7,4 +7,4 @@ const config: UserConfig = {
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

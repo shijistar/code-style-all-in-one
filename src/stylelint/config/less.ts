@@ -14,4 +14,4 @@ const config: Config = {
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

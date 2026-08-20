@@ -129,12 +129,13 @@
     "tsconfig.eslint.json"
   ],
   "scripts": {
-    "build": "run-s build-core copy-lib fix-es",
+    "build": "run-s build-core copy-lib task:add-es-extensions",
     "build-core": "father build",
     "copy-lib": "tsx scripts/copy-lib.ts",
     "fix-es": "tsx scripts/fix-es.ts",
     "prepare": "husky",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "task:add-es-extensions": "tsx scripts/add-esm-extensions.ts es"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.6",

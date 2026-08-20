@@ -1,5 +1,5 @@
-import * as vueNS from 'eslint-plugin-vue';
 import * as typescriptParserNS from '@typescript-eslint/parser';
+import * as vueNS from 'eslint-plugin-vue';
 import type { Linter } from 'eslint';
 import { unwrap } from '../utils/interop';
 
@@ -30,4 +30,4 @@ const config: Linter.Config[] = vueRecommended.map((part: Linter.Config) => {
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

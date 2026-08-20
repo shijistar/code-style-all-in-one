@@ -6,4 +6,4 @@ const config: Record<string, string> = {
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

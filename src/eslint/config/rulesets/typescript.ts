@@ -1,10 +1,10 @@
 import * as tseslintNS from '@typescript-eslint/eslint-plugin';
 import * as typescriptParserNS from '@typescript-eslint/parser';
 import * as importPlugin from 'eslint-plugin-import';
+import type { ESLint, Linter } from 'eslint';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { ESLint, Linter } from 'eslint';
 import { unwrap } from '../utils/interop';
 
 /* eslint-disable @typescript-eslint/no-require-imports -- require.resolve() is
@@ -123,4 +123,4 @@ const config: Linter.Config[] = [
 
 export default config;
 
-module.exports = config;
+// module.exports = config;

@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "lib": ["ESNext", "DOM", "WebWorker"],
+    "types": ["node"],
     "sourceMap": true,
     "jsx": "react-jsx",
     "strict": true,
