@@ -3,8 +3,9 @@ import prettier from './rulesets/prettier';
 import reactQuery from './rulesets/react-query';
 import recommendedBase from './rulesets/recommended-base';
 import { mergeConfig } from './utils';
+import type { Linter } from 'eslint';
 
-const config = mergeConfig(recommendedBase, next, reactQuery, prettier);
+const config: Linter.Config[] = mergeConfig(recommendedBase, next, reactQuery, prettier);
 
 export default config;
 

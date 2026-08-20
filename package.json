@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -55,61 +55,61 @@
     },
     "./eslint/base": {
       "types": "./lib/eslint/config/base.d.ts",
-      "import": "./es/eslint/config/base.js",
+      "import": "./lib/eslint/config/base.js",
       "require": "./lib/eslint/config/base.js",
       "default": "./lib/eslint/config/base.js"
     },
     "./eslint/next-all": {
       "types": "./lib/eslint/config/next-all.d.ts",
-      "import": "./es/eslint/config/next-all.js",
+      "import": "./lib/eslint/config/next-all.js",
       "require": "./lib/eslint/config/next-all.js",
       "default": "./lib/eslint/config/next-all.js"
     },
     "./eslint/next-recommended": {
       "types": "./lib/eslint/config/next-recommended.d.ts",
-      "import": "./es/eslint/config/next-recommended.js",
+      "import": "./lib/eslint/config/next-recommended.js",
       "require": "./lib/eslint/config/next-recommended.js",
       "default": "./lib/eslint/config/next-recommended.js"
     },
     "./eslint/prettier": {
       "types": "./lib/eslint/config/prettier.d.ts",
-      "import": "./es/eslint/config/prettier.js",
+      "import": "./lib/eslint/config/prettier.js",
       "require": "./lib/eslint/config/prettier.js",
       "default": "./lib/eslint/config/prettier.js"
     },
     "./eslint/react-all": {
       "types": "./lib/eslint/config/react-all.d.ts",
-      "import": "./es/eslint/config/react-all.js",
+      "import": "./lib/eslint/config/react-all.js",
       "require": "./lib/eslint/config/react-all.js",
       "default": "./lib/eslint/config/react-all.js"
     },
     "./eslint/react-recommended": {
       "types": "./lib/eslint/config/react-recommended.d.ts",
-      "import": "./es/eslint/config/react-recommended.js",
+      "import": "./lib/eslint/config/react-recommended.js",
       "require": "./lib/eslint/config/react-recommended.js",
       "default": "./lib/eslint/config/react-recommended.js"
     },
     "./eslint/typescript": {
       "types": "./lib/eslint/config/typescript.d.ts",
-      "import": "./es/eslint/config/typescript.js",
+      "import": "./lib/eslint/config/typescript.js",
       "require": "./lib/eslint/config/typescript.js",
       "default": "./lib/eslint/config/typescript.js"
     },
     "./eslint/vue-all": {
       "types": "./lib/eslint/config/vue-all.d.ts",
-      "import": "./es/eslint/config/vue-all.js",
+      "import": "./lib/eslint/config/vue-all.js",
       "require": "./lib/eslint/config/vue-all.js",
       "default": "./lib/eslint/config/vue-all.js"
     },
     "./eslint/vue-recommended": {
       "types": "./lib/eslint/config/vue-recommended.d.ts",
-      "import": "./es/eslint/config/vue-recommended.js",
+      "import": "./lib/eslint/config/vue-recommended.js",
       "require": "./lib/eslint/config/vue-recommended.js",
       "default": "./lib/eslint/config/vue-recommended.js"
     },
     "./eslint/vue-typescript": {
       "types": "./lib/eslint/config/vue-typescript.d.ts",
-      "import": "./es/eslint/config/vue-typescript.js",
+      "import": "./lib/eslint/config/vue-typescript.js",
       "require": "./lib/eslint/config/vue-typescript.js",
       "default": "./lib/eslint/config/vue-typescript.js"
     }
@@ -142,24 +142,24 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@commitlint/types": "^20.5.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@eslint/js": "^9.0.0",
     "@rushstack/eslint-patch": "^1.10.3",
     "@tanstack/eslint-plugin-query": "^5.66.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/eslint": "^8.56.10",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@types/eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "commitlint": "^20.5.0",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.2.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "eslint-config-prettier": "^10.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-unicorn": "^53.0.0",
-    "eslint-plugin-vue": "^9.26.0",
+    "eslint-plugin-vue": "^10.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "postcss-less": "^6.0.0",
@@ -181,7 +181,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0",
+    "eslint": "^9.0.0",
     "prettier": "^3.0.0",
     "stylelint": "^16.0.0",
     "typescript": "^5.0.0 || ^6.0.0"

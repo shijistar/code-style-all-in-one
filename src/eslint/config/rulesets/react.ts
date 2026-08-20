@@ -1,29 +1,51 @@
-import type { ESLint } from 'eslint';
-import eslintComments from './eslint-comments';
+import * as reactNS from 'eslint-plugin-react';
+import * as reactHooksNS from 'eslint-plugin-react-hooks';
+import type { Linter } from 'eslint';
+import { unwrap } from '../utils/interop';
 
-const restrictedDisableRule = eslintComments.rules?.[
-  '@eslint-community/eslint-comments/no-restricted-disable'
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-] as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const react = unwrap(reactNS as any) as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const reactHooks = unwrap(reactHooksNS as any) as any;
 
-const config: ESLint.ConfigData = {
-  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended'],
-  plugins: ['react'],
-  settings: {
-    react: {
-      version: 'detect',
+const config: Linter.Config[] = [
+  {
+    name: 'tiny-codes/react/language-options',
+    languageOptions: {
+      globals: {
+        JSX: 'readonly',
+      },
     },
   },
-  rules: {
-    'react/no-array-index-key': ['error'], // Prevent using array index in keys
-    'react-hooks/exhaustive-deps': ['error'], // Checks effect dependencies
-    '@eslint-community/eslint-comments/no-restricted-disable': [
-      ...restrictedDisableRule,
-      'react-hooks/exhaustive-deps', // Disallow disabling rules with comments
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ] as any,
+  {
+    name: 'tiny-codes/react/jsx-runtime',
+    ...react.configs.flat['jsx-runtime'],
   },
-};
+  {
+    name: 'tiny-codes/react/recommended',
+    ...react.configs.flat.recommended,
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    name: 'tiny-codes/react/hooks',
+    ...reactHooks.configs.flat['recommended-latest'],
+  },
+  {
+    name: 'tiny-codes/react/rules',
+    rules: {
+      'react/no-array-index-key': ['error'], // Prevent using array index in keys
+      'react-hooks/exhaustive-deps': ['error'], // Checks effect dependencies
+      '@eslint-community/eslint-comments/no-restricted-disable': [
+        'error',
+        'react-hooks/exhaustive-deps', // Disallow disabling rules with comments
+      ],
+    },
+  },
+];
 
 export default config;
 

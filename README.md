@@ -32,26 +32,39 @@ npm install -D @tiny-codes/code-style-all-in-one --no-optional
 
 ### Eslint configuration
 
-Create a `.eslintrc.cjs` file in the project root directory with the following configuration:
+> **ESLint 9+ (flat config) only.** Starting with v3, this package only ships flat
+> config presets. Create an `eslint.config.mjs` file in the project root directory
+> with the following configuration:
 
-_.eslintrc.cjs_
+_eslint.config.mjs_
 
 ```js
-module.exports = {
-  extends: ['@tiny-codes/code-style-all-in-one/eslint/config/recommended'],
-};
+// eslint.config.mjs
+import tinylint from '@tiny-codes/code-style-all-in-one';
+
+export default [...tinylint.eslint.recommended];
+```
+
+Or compose presets yourself, the last `prettier` preset should be the last one:
+
+_eslint.config.mjs_
+
+```js
+import { recommended, typescript, prettier } from '@tiny-codes/code-style-all-in-one/eslint';
+
+export default [...recommended, ...typescript, ...prettier];
 ```
 
 #### Presets
 
-- For `React` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/config/react-recommended` or `@tiny-codes/code-style-all-in-one/eslint/config/react-all` preset
-- For `Vue` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/config/vue-recommended`, `@tiny-codes/code-style-all-in-one/eslint/config/vue-typescript` or `@tiny-codes/code-style-all-in-one/eslint/config/vue-all` preset
-- For `Next.js` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/config/next-recommended` or `@tiny-codes/code-style-all-in-one/eslint/config/next-all` preset
-- Here are some basic presets that you can also combine the presets to create your own configuration, please note again that `@tiny-codes/code-style-all-in-one/eslint/config/prettier` should be the last one
-  - `@tiny-codes/code-style-all-in-one/eslint/config/base`: base configuration
-  - `@tiny-codes/code-style-all-in-one/eslint/config/recommended`: recommended configuration
-  - `@tiny-codes/code-style-all-in-one/eslint/config/typescript`: typescript configuration
-  - `@tiny-codes/code-style-all-in-one/eslint/config/prettier`: prettier configuration
+- For `React` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/react-recommended` or `@tiny-codes/code-style-all-in-one/eslint/react-all` preset
+- For `Vue` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/vue-recommended`, `@tiny-codes/code-style-all-in-one/eslint/vue-typescript` or `@tiny-codes/code-style-all-in-one/eslint/vue-all` preset
+- For `Next.js` projects, it is recommended to use the `@tiny-codes/code-style-all-in-one/eslint/next-recommended` or `@tiny-codes/code-style-all-in-one/eslint/next-all` preset (requires `next` installed in the consumer project)
+- Here are some basic presets that you can also combine the presets to create your own configuration, please note again that `@tiny-codes/code-style-all-in-one/eslint/prettier` should be the last one
+  - `@tiny-codes/code-style-all-in-one/eslint/base`: base configuration
+  - `@tiny-codes/code-style-all-in-one/eslint/recommended`: recommended configuration
+  - `@tiny-codes/code-style-all-in-one/eslint/typescript`: typescript configuration
+  - `@tiny-codes/code-style-all-in-one/eslint/prettier`: prettier configuration
 
 ### Stylelint configuration
 

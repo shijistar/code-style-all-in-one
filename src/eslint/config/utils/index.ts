@@ -1,31 +1,20 @@
-import type { ESLint } from 'eslint';
+import type { Linter } from 'eslint';
+
+type FlattenableConfig = Linter.Config | Linter.Config[];
 
 /**
- * Merge ESLint configuration objects, support multiple configuration objects, the latter
- * configuration object will override the former configuration object
+ * Flatten multiple ESLint flat configuration parts into a single flat config array.
  *
- * @param {...ESLint.ConfigData} configs - ESLint configuration objects to merge, the latter
- *   configuration object will override the former configuration object. None of the configuration
- *   objects will be modified, and a new configuration object will be returned.
+ * In flat config, later objects override earlier ones for the same scope, so simple array
+ * concatenation naturally preserves the "later overrides earlier" rule semantics. Each part may be
+ * a single config object or an array of config objects.
  *
- * @returns {ESLint.ConfigData} - The merged ESLint configuration object.
+ * @param {...FlattenableConfig[]} parts - ESLint flat config parts to concatenate.
+ *
+ * @returns {Linter.Config[]} - The combined ESLint flat configuration array.
  */
-function mergeConfig(...configs: ESLint.ConfigData[]): ESLint.ConfigData {
-  return configs.reduce(
-    (acc, config) => {
-      return {
-        extends: [...(acc.extends ?? []), ...(config.extends ?? [])],
-        plugins: [...(acc.plugins ?? []), ...(config.plugins ?? [])],
-        settings: { ...acc.settings, ...config.settings },
-        rules: { ...acc.rules, ...config.rules },
-        parser: config.parser ?? acc.parser,
-        parserOptions: { ...acc.parserOptions, ...config.parserOptions },
-        overrides: [...(acc.overrides ?? []), ...(config.overrides ?? [])],
-        env: { ...acc.env, ...config.env },
-      };
-    },
-    { extends: [], plugins: [], settings: {}, rules: {} }
-  );
+function mergeConfig(...parts: FlattenableConfig[]): Linter.Config[] {
+  return parts.flat() as Linter.Config[];
 }
 
 export { mergeConfig };

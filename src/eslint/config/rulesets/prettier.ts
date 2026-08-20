@@ -1,8 +1,11 @@
-import type { ESLint } from 'eslint';
+import * as prettierRecNS from 'eslint-plugin-prettier/recommended';
+import type { Linter } from 'eslint';
+import { unwrap } from '../utils/interop';
 
-const config: ESLint.ConfigData = {
-  extends: ['plugin:prettier/recommended'],
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const prettierRecommended = unwrap(prettierRecNS as any) as any;
+
+const config: Linter.Config[] = [prettierRecommended];
 
 export default config;
 

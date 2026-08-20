@@ -1,34 +1,56 @@
-import type { ESLint } from 'eslint';
+import * as js from '@eslint/js';
+import * as importPlugin from 'eslint-plugin-import';
+import * as babelParserNS from '@babel/eslint-parser';
+import * as globalsNS from 'globals';
 import { existsSync } from 'node:fs';
+import type { Linter } from 'eslint';
+import { unwrap } from '../utils/interop';
 
-const config: ESLint.ConfigData = {
-  extends: ['eslint:recommended', 'plugin:import/recommended'],
-  plugins: ['import'],
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    sourceType: 'module',
-    requireConfigFile: false,
-    allowImportExportEverywhere: true,
-    ecmaFeatures: {
-      jsx: true,
-    },
-    babelOptions: {
-      babelrc: false,
-      configFile: false,
-      browserslistConfigFile: false,
-      caller: {
-        supportsTopLevelAwait: true,
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const babel = unwrap(babelParserNS as any) as typeof babelParserNS;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const importPluginFix = unwrap(importPlugin as any);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const jsFix = unwrap(js as any) as typeof js;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const globalsFix = unwrap(globalsNS as any) as Record<string, Record<string, boolean>>;
+
+const config: Linter.Config[] = [
+  {
+    name: 'tiny-codes/base/recommended',
+    ...jsFix.configs.recommended,
+  },
+  importPluginFix.flatConfigs.recommended,
+  {
+    name: 'tiny-codes/base/language-options',
+    languageOptions: {
+      parser: babel,
+      parserOptions: {
+        sourceType: 'module',
+        requireConfigFile: false,
+        allowImportExportEverywhere: true,
+        ecmaFeatures: {
+          jsx: true,
+        },
+        babelOptions: {
+          babelrc: false,
+          configFile: false,
+          browserslistConfigFile: false,
+          caller: {
+            supportsTopLevelAwait: true,
+          },
+        },
+        project: existsSync('./tsconfig.eslint.json') ? './tsconfig.eslint.json' : undefined,
+      },
+      globals: {
+        ...(globalsFix.browser ?? {}),
+        ...(globalsFix.node ?? {}),
+        ...(globalsFix.jest ?? {}),
+        ...(globalsFix.es2021 ?? {}),
       },
     },
-    project: existsSync('./tsconfig.eslint.json') ? './tsconfig.eslint.json' : undefined,
   },
-  env: {
-    browser: true,
-    node: true,
-    es2022: true,
-    jest: true,
-  },
-};
+];
 
 export default config;
 

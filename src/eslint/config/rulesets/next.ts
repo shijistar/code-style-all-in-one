@@ -1,8 +1,11 @@
-import type { ESLint } from 'eslint';
+import * as nextConfigNS from 'eslint-config-next/core-web-vitals';
+import type { Linter } from 'eslint';
+import { unwrap } from '../utils/interop';
 
-const config: ESLint.ConfigData = {
-  extends: ['next/core-web-vitals'],
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const nextConfig = unwrap(nextConfigNS as any) as any;
+
+const config: Linter.Config[] = nextConfig;
 
 export default config;
 

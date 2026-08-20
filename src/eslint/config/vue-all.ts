@@ -1,8 +1,9 @@
 import others from './rulesets/others';
-import { mergeConfig } from './utils';
 import vueTS from './vue-typescript';
+import { mergeConfig } from './utils';
+import type { Linter } from 'eslint';
 
-const config = mergeConfig(vueTS, others);
+const config: Linter.Config[] = mergeConfig(vueTS, others);
 
 export default config;
 

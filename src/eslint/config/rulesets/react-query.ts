@@ -1,8 +1,11 @@
-import type { ESLint } from 'eslint';
+import * as queryNS from '@tanstack/eslint-plugin-query';
+import type { Linter } from 'eslint';
+import { unwrap } from '../utils/interop';
 
-const config: ESLint.ConfigData = {
-  extends: ['plugin:@tanstack/eslint-plugin-query/recommended'],
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const query = unwrap(queryNS as any) as any;
+
+const config: Linter.Config[] = query.configs['flat/recommended'];
 
 export default config;
 
