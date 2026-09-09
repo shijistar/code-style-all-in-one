@@ -18,5 +18,6 @@
     "noImplicitAny": true,
     "resolveJsonModule": true,
     "allowJs": false
-  }
+  },
+  "exclude": [".storybook"]
 }

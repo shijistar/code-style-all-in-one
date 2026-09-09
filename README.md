@@ -179,3 +179,25 @@ You can also add the following configuration to the `package.json` to generate c
   }
 },
 ```
+
+## Documentation
+
+The interactive documentation site (docs + demos) is built with [Storybook](https://storybook.js.org/):
+
+- Bilingual docs (English / 简体中文) covering installation, usage and FAQs of every preset.
+- Live demos showing ESLint / Stylelint / Prettier / Husky / changelog configurations.
+
+```bash
+# Run Storybook in dev mode (http://localhost:6006)
+npm run storybook
+
+# Build a static site into ./storybook-static
+npm run build-storybook
+```
+
+> After changing the docs (`docs/*.mdx`) or stories (`stories/*.stories.tsx`), regenerate the sidebar title maps:
+
+```bash
+npm run task:update-docs-title
+npm run task:update-stories-title
+```

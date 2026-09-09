@@ -131,11 +131,15 @@
   "scripts": {
     "build": "run-s build-core copy-lib task:add-es-extensions",
     "build-core": "father build",
+    "build-storybook": "storybook build",
     "copy-lib": "tsx scripts/copy-lib.ts",
     "fix-es": "tsx scripts/fix-es.ts",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
-    "task:add-es-extensions": "tsx scripts/add-esm-extensions.ts es"
+    "storybook": "storybook dev -p 6006",
+    "task:add-es-extensions": "tsx scripts/add-esm-extensions.ts es",
+    "task:update-docs-title": "tsx scripts/update-docs-title.ts",
+    "task:update-stories-title": "tsx scripts/update-stories-title.ts"
   },
   "dependencies": {
     "@babel/eslint-parser": "^8.0.1",
@@ -168,18 +172,31 @@
     "prettier-plugin-jsdoc": "^1.8.0",
     "prettier-plugin-packagejson": "^3.0.2",
     "prettier-plugin-two-style-order": "^1.0.1",
-    "stylelint": ">=16.0.0",
+    "stylelint": "^16.0.0",
     "stylelint-config-css-modules": "~4.6.0",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "~10.3.5",
+    "@storybook/addon-links": "~10.3.5",
+    "@storybook/react-vite": "~10.3.5",
     "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "antd": "^6.6.3",
     "father": "^4.6.17",
+    "i18next": "^25.10.10",
     "npm-run-all2": "^9.0.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-syntax-highlighter": "^16.1.1",
+    "storybook": "~10.3.6",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",

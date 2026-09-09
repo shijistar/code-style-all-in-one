@@ -6,6 +6,9 @@ lib
 /lint-staged
 /prettier
 /stylelint
+storybook-static
+.storybook/docs/titles.json
+.storybook/stories/titles.json
 
-# graft's local graph cache — regenerable, not committed (run `graft build`).
+# graft's local graph cache — regenerable, not committed (run \`graft build\`).
 /graft/
