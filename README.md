@@ -187,13 +187,11 @@ The interactive documentation site (docs + demos) is built with [Storybook](http
 - Bilingual docs (English / 简体中文) covering installation, usage and FAQs of every preset.
 - Live demos showing ESLint / Stylelint / Prettier / Husky / changelog configurations.
 
-```bash
-# Run Storybook in dev mode (http://localhost:6006)
-npm run storybook
+Interactive documentation and API demos are available in the Storybook site:
 
-# Build a static site into ./storybook-static
-npm run build-storybook
-```
+- Online site: <https://shijistar.github.io/code-style-all-in-one/> (available after GitHub Pages is enabled)
+- Local development: `npm run storybook`
+- Static build: `npm run build-storybook`
 
 > After changing the docs (`docs/*.mdx`) or stories (`stories/*.stories.tsx`), regenerate the sidebar title maps:
 
