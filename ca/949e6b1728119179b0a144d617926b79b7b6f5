@@ -1,0 +1,18 @@
+.github/copilot-instructions.md
+  h_99cad05bea77d1 42
+AGENTS.md
+  h_99cad05bea77d1 42
+opencode.json
+  h_99cad05bea77d1 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ca949e6b1728119179b0a144d617926b79b7b6f5",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
