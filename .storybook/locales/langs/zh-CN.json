@@ -5,14 +5,11 @@
   "storybook.preview.themeDescription": "主题",
   "storybook.preview.theme.light": "浅色",
   "storybook.preview.theme.dark": "深色",
-
   "story.demo.copy": "复制",
   "story.demo.copied": "已复制",
   "story.demo.run": "运行",
-
   "story.config.singleFile": "单个配置文件",
   "story.config.fileName": "文件",
-
   "story.eslint.title": "ESLint 预设",
   "story.eslint.description": "针对不同类型项目的 ESLint 预设。选择一个，或组合基础预设——prettier 必须放在最后。",
   "story.eslint.recommended": "推荐配置",
@@ -25,7 +22,6 @@
   "story.eslint.nextDesc": "Next.js 项目：next-recommended 或 next-all。",
   "story.eslint.combined": "组合配置",
   "story.eslint.combinedDesc": "组合基础预设定制自己的配置。注意：prettier 必须放在最后。",
-
   "story.tools.title": "Stylelint 与 Prettier",
   "story.tools.description": "Stylelint（CSS/Less/SCSS）与 Prettier 共享配置。",
   "story.tools.stylelint": "Stylelint",
@@ -36,7 +32,6 @@
   "story.tools.stylelintScssDesc": "项目使用 SCSS 时选用此配置。",
   "story.tools.prettier": "Prettier",
   "story.tools.prettierDesc": "带 import 排序与 JSDoc 插件的 Prettier 共享配置。",
-
   "story.husky.title": "Husky 与 Lint-staged",
   "story.husky.description": "配置 git 钩子与 lint-staged，让每次提交自动完成代码检查与格式化。",
   "story.husky.initCommand": "初始化 husky",
@@ -44,7 +39,6 @@
   "story.husky.commitMsg": ".husky/commit-msg",
   "story.husky.lintStaged": "lint-staged.config.mjs",
   "story.husky.terminalTitle": "终端",
-
   "story.release.title": "Changelog 与发布",
   "story.release.description": "使用 conventional-changelog 自动生成 changelog，并用 commit-and-tag-version 完成版本发布。",
   "story.release.changelog": "生成 changelog",
@@ -52,9 +46,10 @@
   "story.release.release": "完整发布",
   "story.release.releaseDesc": "自动版本号提升、打 tag 与 CHANGELOG 生成，类似 npm version。",
   "story.release.huskyHook": "提交时自动更新 changelog（可选）",
-
   "story.meta.eslintPresets": "ESLint 预设示例：推荐配置、react、vue、next.js 与组合配置。",
   "story.meta.tools": "Stylelint（base/Less/SCSS）与 Prettier 配置示例。",
   "story.meta.huskySetup": "Husky git 钩子与 lint-staged 配置，附终端演示。",
-  "story.meta.changelogRelease": "conventional-changelog 与 commit-and-tag-version 自动发布脚本。"
+  "story.meta.changelogRelease": "conventional-changelog 与 commit-and-tag-version 自动发布脚本。",
+  "story.prevnext.prev": "上一篇",
+  "story.prevnext.next": "下一篇"
 }

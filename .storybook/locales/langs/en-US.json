@@ -5,14 +5,11 @@
   "storybook.preview.themeDescription": "Theme",
   "storybook.preview.theme.light": "Light",
   "storybook.preview.theme.dark": "Dark",
-
   "story.demo.copy": "Copy",
   "story.demo.copied": "Copied",
   "story.demo.run": "Run",
-
   "story.config.singleFile": "Single config file",
   "story.config.fileName": "File",
-
   "story.eslint.title": "ESLint Presets",
   "story.eslint.description": "Different ESLint presets for different project types. Pick one, or combine presets — prettier must come last.",
   "story.eslint.recommended": "Recommended",
@@ -25,7 +22,6 @@
   "story.eslint.nextDesc": "For Next.js projects: next-recommended or next-all.",
   "story.eslint.combined": "Combined",
   "story.eslint.combinedDesc": "Combine basic presets to build your own. Note: prettier must be the last one.",
-
   "story.tools.title": "Stylelint & Prettier",
   "story.tools.description": "Stylelint (CSS/Less/SCSS) and Prettier shared configurations.",
   "story.tools.stylelint": "Stylelint",
@@ -36,7 +32,6 @@
   "story.tools.stylelintScssDesc": "Use this one when your project is written in SCSS.",
   "story.tools.prettier": "Prettier",
   "story.tools.prettierDesc": "Shared Prettier configuration with import sorting and JSDoc plugins.",
-
   "story.husky.title": "Husky & Lint-staged",
   "story.husky.description": "Set up git hooks and lint-staged so every commit is linted and formatted automatically.",
   "story.husky.initCommand": "Initialize husky",
@@ -44,7 +39,6 @@
   "story.husky.commitMsg": ".husky/commit-msg",
   "story.husky.lintStaged": "lint-staged.config.mjs",
   "story.husky.terminalTitle": "Terminal",
-
   "story.release.title": "Changelog & Release",
   "story.release.description": "Automate conventional-changelog generation and version release with commit-and-tag-version.",
   "story.release.changelog": "Generate changelog",
@@ -52,9 +46,10 @@
   "story.release.release": "Full release",
   "story.release.releaseDesc": "Automated version bump, tagging and CHANGELOG generation, like npm version.",
   "story.release.huskyHook": "Auto changelog on commit (optional)",
-
   "story.meta.eslintPresets": "ESLint preset examples: recommended, react, vue, next.js and combined presets.",
   "story.meta.tools": "Stylelint (base/Less/SCSS) and Prettier configuration examples.",
   "story.meta.huskySetup": "Husky git hooks and lint-staged setup with a terminal demo.",
-  "story.meta.changelogRelease": "conventional-changelog and commit-and-tag-version scripts for automated releases."
+  "story.meta.changelogRelease": "conventional-changelog and commit-and-tag-version scripts for automated releases.",
+  "story.prevnext.prev": "Previous",
+  "story.prevnext.next": "Next"
 }

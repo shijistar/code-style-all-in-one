@@ -7,6 +7,8 @@ import darkAlgorithm from 'antd/es/theme/themes/dark';
 import defaultAlgorithm from 'antd/es/theme/themes/default';
 import { storyI18n } from '../locales';
 import { dark, light } from '../utils/themes';
+import { NAV_ITEMS } from './nav-config';
+import { PrevNextNav, useCurrentStoryKey } from './PrevNextNav';
 
 interface ThemedDocsContainerProps extends DocsContainerProps<ReactRenderer> {}
 
@@ -18,6 +20,7 @@ export const DocPageContainer = (props: PropsWithChildren<ThemedDocsContainerPro
   const localeKey = props.context.store?.userGlobals.globals.storyLocale;
   // @ts-expect-error: because store is an internal api
   const themeKey = props.context.store?.userGlobals.globals.theme;
+  const currentKey = useCurrentStoryKey();
   const isPreferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const theme = (!themeKey && isPreferDark) || themeKey === 'dark' ? 'dark' : 'light';
   const isDark = theme === 'dark';
@@ -63,6 +66,7 @@ export const DocPageContainer = (props: PropsWithChildren<ThemedDocsContainerPro
         <DocsContainer {...props} theme={isDark ? dark : light}>
           {props.children}
         </DocsContainer>
+        <PrevNextNav current={currentKey} items={NAV_ITEMS} />
       </ConfigProvider>
     </div>
   );

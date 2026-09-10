@@ -7,6 +7,8 @@ import enUS from 'antd/locale/en_US';
 import zhCN from 'antd/locale/zh_CN';
 import { storyI18n } from '../locales';
 import { dark, getThemeKey, light } from '../utils/themes';
+import { NAV_ITEMS } from './nav-config';
+import { PrevNextNav, useCurrentStoryKey } from './PrevNextNav';
 
 const AppLazy = lazy(() => import('antd/es/app'));
 const ConfigProviderLazy = lazy(() => import('antd/es/config-provider'));
@@ -25,6 +27,7 @@ function useStoryPageDecorator(Story: React.ComponentType, context: StoryContext
   const isDark = theme === 'dark';
   const themeName = isDark ? 'dark' : 'light';
   const [prevTheme, setPrevTheme] = useState(themeName);
+  const currentKey = useCurrentStoryKey();
 
   useEffect(() => {
     if (storyI18n.language !== localeKey) {
@@ -64,6 +67,7 @@ function useStoryPageDecorator(Story: React.ComponentType, context: StoryContext
       >
         <AppLazy>
           <Story />
+          <PrevNextNav current={currentKey} items={NAV_ITEMS} />
         </AppLazy>
       </ConfigProviderLazy>
     </Suspense>
