@@ -1,0 +1,15 @@
+.storybook/components/PrevNextNav.tsx
+  h_99cad05bea77d1 3,40,66,76-77
+  h_99cad05bea77d1 67-68,78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e3100359393e424f03a76013a9daa220767d6003",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
