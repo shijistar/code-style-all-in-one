@@ -3,7 +3,6 @@ import { lazy, Suspense } from 'react';
 import type { DocsContainerProps } from '@storybook/addon-docs/blocks';
 import { Description, Subtitle, Title } from '@storybook/addon-docs/blocks';
 import type { Preview, ReactRenderer } from '@storybook/react-vite';
-// @ts-expect-error
 import 'antd/dist/reset.css';
 import { useStoryPageDecorator } from './components/useStoryPageDecorator';
 import { ensureStoryI18n } from './locales';
