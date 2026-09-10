@@ -1,6 +1,6 @@
 {
   "name": "@tiny-codes/code-style-all-in-one",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Provides popular eslint, prettier, stylelint, commitlint, and prettier configurations, ALL IN ONE",
   "keywords": [
     "code style guide",
@@ -157,7 +157,6 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "commitlint": "^21.2.2",
-    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.0.0",
     "eslint-config-prettier": "^10.0.0",

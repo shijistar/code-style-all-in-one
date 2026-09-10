@@ -1,5 +1,14 @@
 # @tiny-codes/code-style-all-in-one
 
+## v3.1.0
+
+`2026-9-11`
+
+### Chore
+
+- Remove `conventional-changelog-cli` dependency
+- Bump `commitlint` related dependencies to latest versions
+
 ## v3.0.0
 
 `2026-8-20`
