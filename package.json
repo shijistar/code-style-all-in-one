@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shijistar/code-style-all-in-one"
+    "url": "git+https://github.com/shijistar/code-style-all-in-one.git"
   },
   "author": "李凤宝(Leo) <shijistar@gmail.com>",
   "exports": {
