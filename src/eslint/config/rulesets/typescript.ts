@@ -53,6 +53,8 @@ const config: Linter.Config[] = [
         [resolve('@typescript-eslint/parser')]: ['.ts', '.mts', '.cts', '.tsx', '.d.ts'],
       },
       'import/resolver': {
+        typescript: true,
+        node: true,
         [resolve('eslint-import-resolver-node')]: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },

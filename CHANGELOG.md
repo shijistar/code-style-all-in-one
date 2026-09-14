@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v3.1.1
+
+`2026-9-14`
+
+### Feature
+
+- Add TypeScript and Node resolver support in ESLint configuration
+
 ## v3.1.0
 
 `2026-9-11`
