@@ -1,0 +1,32 @@
+CHANGELOG.md
+  h_99cad05bea77d1 3-10
+package.json
+  h_99cad05bea77d1 3,92-97,161,167
+src/eslint/config/rulesets/typescript.ts
+  h_99cad05bea77d1 50,69,87
+src/eslint/config/rulesets/eslint-comments.ts
+  h_99cad05bea77d1 10,17
+src/eslint/config/react-easy-recommended.ts
+  h_99cad05bea77d1 1-12
+src/eslint/config/rulesets/base.ts
+  h_99cad05bea77d1 20,25
+src/eslint/config/rulesets/react.ts
+  h_99cad05bea77d1 4,10,12-13,16,19-21
+src/eslint/config/rulesets/react-easy.ts
+  h_99cad05bea77d1 1-33
+src/eslint/config/rulesets/react-base.ts
+  h_99cad05bea77d1 1-34
+package-lock.json
+  h_99cad05bea77d1 19,25,5758-6027
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "92565107d01f6002c2e21c8c42d6582d2c4a69ad",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
