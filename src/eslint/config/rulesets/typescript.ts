@@ -47,7 +47,7 @@ const tseslintConfigs = (tseslint as unknown as { configs: Record<string, { rule
 
 const config: Linter.Config[] = [
   {
-    name: 'tiny-codes/typescript/resolver-settings',
+    name: 'typescript/resolver-settings',
     settings: {
       'import/parsers': {
         [resolve('@typescript-eslint/parser')]: ['.ts', '.mts', '.cts', '.tsx', '.d.ts'],
@@ -66,7 +66,7 @@ const config: Linter.Config[] = [
   },
   importPluginFix.flatConfigs.typescript as Linter.Config,
   {
-    name: 'tiny-codes/typescript/strict',
+    name: 'typescript/strict',
     files: tsFilePatterns,
     plugins: {
       '@typescript-eslint': tseslint as unknown as ESLint.Plugin,
@@ -84,7 +84,7 @@ const config: Linter.Config[] = [
     },
   },
   {
-    name: 'tiny-codes/typescript/rules',
+    name: 'typescript/rules',
     files: tsFilePatterns,
     rules: {
       ...(tseslintConfigs.strict?.rules ?? {}),

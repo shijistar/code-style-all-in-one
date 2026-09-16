@@ -7,14 +7,14 @@ const comments = unwrap(commentsNS as any) as any;
 
 const config: Linter.Config[] = [
   {
-    name: 'tiny-codes/eslint-comments/recommended',
+    name: 'eslint-comments/recommended',
     plugins: {
       '@eslint-community/eslint-comments': comments,
     },
     rules: comments.configs.recommended.rules,
   },
   {
-    name: 'tiny-codes/eslint-comments/rules',
+    name: 'eslint-comments/rules',
     rules: {
       '@eslint-community/eslint-comments/no-restricted-disable': [
         'error',

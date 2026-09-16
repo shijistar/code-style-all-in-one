@@ -17,12 +17,12 @@ const globalsFix = unwrap(globalsNS as any) as Record<string, Record<string, boo
 
 const config: Linter.Config[] = [
   {
-    name: 'tiny-codes/base/recommended',
+    name: 'base/recommended',
     ...jsFix.configs.recommended,
   },
   importPluginFix.flatConfigs.recommended,
   {
-    name: 'tiny-codes/base/language-options',
+    name: 'base/language-options',
     languageOptions: {
       parser: babel,
       parserOptions: {

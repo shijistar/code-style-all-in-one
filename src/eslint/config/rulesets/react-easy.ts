@@ -1,16 +1,16 @@
-import * as reactHooksNS from 'eslint-plugin-react-hooks';
+import * as tinyCodeReactHooksNS from '@tiny-codes/eslint-plugin-react-hooks';
 import type { Linter } from 'eslint';
 import { unwrap } from '../utils/interop';
 import reactBase from './react-base';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const reactHooks = unwrap(reactHooksNS as any) as any;
+const tinyCodeReactHooks = unwrap(tinyCodeReactHooksNS as any) as any;
 
-const config: Linter.Config[] = [
+export const config: Linter.Config[] = [
   ...reactBase,
   {
     name: 'react-hooks',
-    ...reactHooks.configs.flat.recommended,
+    ...tinyCodeReactHooks.configs.flat.recommended,
   },
   {
     name: 'react-hooks/overrides',

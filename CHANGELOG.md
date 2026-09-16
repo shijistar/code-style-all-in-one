@@ -1,5 +1,13 @@
 # @tiny-codes/code-style-all-in-one
 
+## v3.2.0
+
+`2026-9-14`
+
+### Feature
+
+- Add `eslint/react-easy` config
+
 ## v3.1.1
 
 `2026-9-14`
