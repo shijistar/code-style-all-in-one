@@ -55,8 +55,6 @@ const config: Config = {
   importOrderGroupNamespaceSpecifiers: true,
   importOrderCaseInsensitive: true,
 
-  jsdocParser: true,
-  jsdocSingleLineComment: false,
   jsdocSeparateReturnsFromParam: true,
   jsdocSeparateTagGroups: true,
   jsdocCapitalizeDescription: false,
