@@ -8,6 +8,11 @@
 
 - Add `eslint/react-easy` config
 
+### Chore
+
+- Add `@babel/core` and `@babel/eslint-parser` as peer dependencies
+- Lock `prettier-plugin-jsdoc` dependency version because it's conflicting with `@trivago/prettier-plugin-sort-imports`
+
 ## v3.1.1
 
 `2026-9-14`
