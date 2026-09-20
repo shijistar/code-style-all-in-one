@@ -1,0 +1,16 @@
+package.json
+  h_99cad05bea77d1 3,178-179
+CHANGELOG.md
+  h_99cad05bea77d1 9,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "49785dac831075efdb55a68b535ae6b5bbacd103",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
