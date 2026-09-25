@@ -1,0 +1,16 @@
+CHANGELOG.md
+  h_99cad05bea77d1 10
+.vscode/settings.json
+  h_99cad05bea77d1 12-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5b9c127721ad0c517d4c5b40c98ffd5c9fb9dc15",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
