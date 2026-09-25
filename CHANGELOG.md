@@ -7,6 +7,7 @@
 ### Feature
 
 - Add `react-easy` eslint config
+- Eslint configuration `react-hooks` aligned with React 19
 
 ### Chore
 
